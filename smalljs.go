@@ -2,7 +2,7 @@ package smalljs
 
 import (
 	"bytes"
-	"fmt"
+	//"fmt"
 	"io/ioutil"
 	//"regexp
 	"strings"
@@ -10,7 +10,6 @@ import (
 )
 
 type SmallJs struct {
-	//stringRgx *regexp.Regexp
 }
 
 func NewSmallJs() *SmallJs {
@@ -19,11 +18,8 @@ func NewSmallJs() *SmallJs {
 }
 
 func (me *SmallJs) Make(srcs []string, dest string) error {
-	fmt.Println("start\n")
-	err := me.init()
-	if err != nil {
-		return err
-	}
+
+	var err error
 	var buff bytes.Buffer
 	for _, src := range srcs {
 		jsRaw, err := ioutil.ReadFile(src)
@@ -40,6 +36,7 @@ func (me *SmallJs) Make(srcs []string, dest string) error {
 		}
 
 		buff.Write(jsRaw)
+		buff.WriteString(" ")
 	}
 	err = ioutil.WriteFile(dest, buff.Bytes(), 0666)
 	if err != nil {
@@ -48,17 +45,9 @@ func (me *SmallJs) Make(srcs []string, dest string) error {
 	return nil
 }
 
-func (me *SmallJs) init() error {
-	//	var err error
-
-	return nil
-}
-
 func (me *SmallJs) ReduceSpace(jsRaw []byte) ([]byte, error) {
+
 	js := string(jsRaw)
-	/*js = strings.Replace(js, "\r\n", " ", -1)
-	js = strings.Replace(js, "\n", " ", -1)
-	*/
 	var buff bytes.Buffer
 	lines := strings.Split(js, "\n")
 	for _, line := range lines {
