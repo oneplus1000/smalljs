@@ -7,7 +7,7 @@ basic javascript minify write in golang.
 
 - remove all comments
 
-- remove new line
+- reduce space
  
 ##example
 

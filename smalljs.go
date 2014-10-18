@@ -51,8 +51,12 @@ func (me *SmallJs) ReduceSpace(jsRaw []byte) ([]byte, error) {
 	var buff bytes.Buffer
 	lines := strings.Split(js, "\n")
 	for _, line := range lines {
-		buff.WriteString(strings.TrimSpace(line))
-		buff.WriteString(" ")
+		line = strings.TrimSpace(line)
+		if line != "" {
+			//fmt.Printf("%s\n", line)
+			buff.WriteString(line)
+			buff.WriteString("\n")
+		}
 	}
 
 	return buff.Bytes(), nil
@@ -124,7 +128,7 @@ func (me *SmallJs) RemoveCommentAndDebugger(jsRaw []byte) ([]byte, error) {
 					inCommentOneline = false
 					//fmt.Println("end")
 					i = i + 1
-					comments[indexOfcomments].End = i
+					comments[indexOfcomments].End = i - 1
 					indexOfcomments++
 					continue
 				}
