@@ -1,9 +1,10 @@
 smalljs
 =======
 
-basic javascript minify
+basic javascript minify write in golang.
 
+##feature
 
 - remove all comments
-
+ 
 - remove new line
