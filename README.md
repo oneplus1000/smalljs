@@ -9,6 +9,7 @@ basic javascript minify write in golang.
 
 -remove new line
  
+##example
 
   ```go
   package main
@@ -21,9 +22,10 @@ basic javascript minify write in golang.
   func main() {
   	smj := smalljs.NewSmallJs()
   	err := smj.Make([]string{
-  		"js/comment.js",
+  		"js/file1.js",
+  		"js/file2.js",
   	},
-  		"js/result_comment.js",
+  		"js/result.js",
   	)
   	if err != nil {
   		fmt.Printf("%s\n", err.Error())
