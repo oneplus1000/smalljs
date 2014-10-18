@@ -1,0 +1,4 @@
+smalljs
+=======
+
+basic javascript minify
