@@ -7,7 +7,7 @@ Basic javascript minify wrote with GO language.
 
 - Remove all comments.
 
-- Justify space in javascript code.
+- Reduce unnecssary space in javascript code.
  
 ##Usage
 
