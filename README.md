@@ -8,6 +8,9 @@ Basic javascript minify wrote with GO language.
 - Remove all comments in javascript code.
 
 - Reduce unnecssary space in javascript code.
+
+- Binding multiple javascript files into one file. 
+
  
 ##Usage
 
