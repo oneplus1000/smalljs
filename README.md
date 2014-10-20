@@ -5,7 +5,7 @@ Basic javascript minify wrote with GO language.
 
 ##Feature
 
-- Remove all comments.
+- Remove all comments in javascript code.
 
 - Reduce unnecssary space in javascript code.
  
