@@ -9,7 +9,7 @@ Basic javascript minify wrote with GO language.
 
 - Reduce unnecssary space in javascript code.
 
-- Combine multiple javascript files into one file. 
+- Binding multiple javascript files into one file. 
 
  
 ##Usage
