@@ -1,15 +1,15 @@
 smalljs
 =======
 
-basic javascript minify write in golang.
+Basic javascript minify wrote with GO language.
 
-##feature
+##Feature
 
-- remove all comments
+- Remove all comments.
 
-- reduce space
+- Justify space in javascript code.
  
-##example
+##Usage
 
   ```go
   package main
