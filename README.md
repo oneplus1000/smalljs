@@ -9,7 +9,7 @@ Basic javascript minify wrote with GO language.
 
 - Reduce unnecssary space in javascript code.
 
-- Binding multiple javascript files into one file. 
+- Combine multiple javascript files into one file. 
 
  
 ##Usage
@@ -25,10 +25,10 @@ Basic javascript minify wrote with GO language.
   func main() {
   	smj := smalljs.NewSmallJs()
   	err := smj.Make([]string{
-  		"js/file1.js",
-  		"js/file2.js",
+  		"js/file1.js",   //input 1
+  		"js/file2.js",   //input 2
   	},
-  		"js/result.js",
+  		"js/result.js",  //output file
   	)
   	if err != nil {
   		fmt.Printf("%s\n", err.Error())
